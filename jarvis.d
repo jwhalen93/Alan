@@ -5,9 +5,11 @@ import std.file;
 import std.algorithm;
 
 void main(){
-	//Initialization	
+	//Initialization
+	//Sets up variables from file
 	auto state = File("State.txt","r");
 	string line;
+
 	while ((line = state.readln()) !is null){
 		if(line=="FirstTime = true\n"){
 			initial_setup();
@@ -18,6 +20,10 @@ void main(){
 			state = File("State.txt","r");
 		}
 	}
+
+	//Begins introduction
+	writeln("Welcome (placeholder).")
+	
 }
 void initial_setup(){
 	auto user = File("User.txt","w");
@@ -35,5 +41,5 @@ void initial_setup(){
 	writeln("Where do you live?");
 	input = readln();
 	user.write("Location: " ~ input);
-
+	
 }
