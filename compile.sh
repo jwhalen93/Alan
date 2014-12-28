@@ -1,7 +1,9 @@
 #!/bin/sh
-#Compilations
-dmd jarvis.d core/user.d 
+#Library Compilations
+dmd core/*.d -lib -ofcore -w
+dmd core/socialmedia/*.d -lib -ofsocialmedia -w
+dmd jarvis.d core.a socialmedia.a
 #Cleanup
-rm jarvis.o
+rm *.o *.a
 
 echo "FirstTime = true" > State.txt

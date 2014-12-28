@@ -2,7 +2,7 @@
  * Module tasked with the purpose of keeping track of and manipulating user data
  */
 
-module core.user;
+module user;
 import std.stdio;
 void initialUserSetup(){
 	auto userFile = File("User.txt","w");
