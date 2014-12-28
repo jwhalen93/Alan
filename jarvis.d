@@ -3,15 +3,19 @@ import std.process;
 import std.string;
 import std.file;
 import std.algorithm;
+import jarvis.status.global;
 
 void main(){
 	//Initialization
 	//Sets up variables from file
 	auto state = File("State.txt","r");
+	auto jarvis_global = new global;
 	string line;
 
 	while ((line = state.readln()) !is null){
 		if(line=="FirstTime = true\n"){
+			jarvis_global.first_time = false;
+			assert(jarvis_global.first_time == false);
 			initial_setup();
 			state.close();
 			state = File("State.txt","w");
@@ -22,7 +26,7 @@ void main(){
 	}
 
 	//Begins introduction
-	writeln("Welcome (placeholder).")
+	writeln("Welcome (placeholder).");
 	
 }
 void initial_setup(){
