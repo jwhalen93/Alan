@@ -3,20 +3,17 @@ import std.process;
 import std.string;
 import std.file;
 import std.algorithm;
-import jarvis.status.global;
+import core.user;
 
-void main(){
+public void main(){
 	//Initialization
 	//Sets up variables from file
 	auto state = File("State.txt","r");
-	auto jarvis_global = new global;
 	string line;
 
 	while ((line = state.readln()) !is null){
 		if(line=="FirstTime = true\n"){
-			jarvis_global.first_time = false;
-			assert(jarvis_global.first_time == false);
-			initial_setup();
+			core.user.initialUserSetup();
 			state.close();
 			state = File("State.txt","w");
 			state.writeln("FirstTime = false");
@@ -27,23 +24,5 @@ void main(){
 
 	//Begins introduction
 	writeln("Welcome (placeholder).");
-	
-}
-void initial_setup(){
-	auto user = File("User.txt","w");
-	
-	writeln("Welcome, this is the initial setup of your personal assistant and data aggregator.");
-	
-	writeln("What is your name?");
-	string input = readln();
-	user.write("User: " ~ input);
-	
-	writeln("How old are you?");
-	input = readln();
-	user.write("Age: " ~ input);
-
-	writeln("Where do you live?");
-	input = readln();
-	user.write("Location: " ~ input);
 	
 }

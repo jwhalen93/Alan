@@ -1,6 +1,6 @@
 #!/bin/sh
 #Compilations
-dmd jarvis.d
+dmd jarvis.d 
 #Cleanup
 #Used to test initialization method
 echo "FirstTime = true" > State.txt
