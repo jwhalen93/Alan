@@ -1,0 +1,7 @@
+{
+	"name": "jarvis",
+	"description": "A personal computational assistant",
+	"copyright": "Copyright © 2014, Michael Gattozzi",
+	"authors": ["mgattozzi"],
+	"targetType":"executable",
+}
