@@ -1,6 +1,6 @@
 #!/bin/sh
 #Compilations
-dmd jarvis.d core/user.d 
+dmd jarvis.d core/* core/socialmedia/*
 #Cleanup
 rm jarvis.o
 
