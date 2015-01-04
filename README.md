@@ -29,3 +29,15 @@ that make it a language that seeks to undo many common frustrations programmers
 have.
 
 You can read more about it [here](http://dlang.org).
+
+###Tasks
+You can see what still needs to be done on the public [Trello Board](https://trello.com/b/9XxhAb62/alan)
+
+###Building Alan
+Make sure you have [dub](https://github.com/D-Programming-Language/dub)
+installed.
+Clone the repository then:
+	cd Alan
+	dub
+This will get all of the dependencies you need, compile, and run the program.
+You will need the ldc in order for it to compile, not dmd.

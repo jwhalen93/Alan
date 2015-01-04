@@ -1,0 +1,5 @@
+module bson;
+
+class bson(){
+
+}
