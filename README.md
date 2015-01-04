@@ -37,7 +37,9 @@ You can see what still needs to be done on the public [Trello Board](https://tre
 Make sure you have [dub](https://github.com/D-Programming-Language/dub)
 installed.
 Clone the repository then:
-	cd Alan
-	dub
+
+    cd Alan
+    dub
+
 This will get all of the dependencies you need, compile, and run the program.
 You will need the ldc in order for it to compile, not dmd.
